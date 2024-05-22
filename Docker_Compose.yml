@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  app:
+    image: manutencao_app
+    networks:
+      - manutencao
+    ports:
+      - "3006:3006"
+    deploy:
+      replicas: 1
+
+networks:
+  manutencao:
+    external: true
